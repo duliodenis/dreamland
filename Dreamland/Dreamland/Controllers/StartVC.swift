@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartVC.swift
 //  Dreamland
 //
 //  Created by Dulio Denis on 4/23/16.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartVC: UIViewController {
 
 
 }
-
