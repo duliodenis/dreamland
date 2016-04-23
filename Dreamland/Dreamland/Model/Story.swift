@@ -8,11 +8,19 @@
 
 import UIKit
 
+
+// MARK: Story
+//       The Story enumeration lists all the pages in the story
+
 enum Story: String {
     case Haunting
     case TheScare
     case Portal
 }
+
+
+// MARK: Story extension
+//       defines the artWork and text for the Story based on the Story enum type
 
 extension Story {
     var artWork: UIImage {
@@ -30,5 +38,23 @@ extension Story {
         case .Portal:
             return "They went off to the Pizzeria, so they could scare Mike or Jeremy, again! But they saw a portal instead. A portal, that sends them into another world."
         }
+    }
+}
+
+
+// MARK: Page Class
+//       A page has a story and two optional choice tuples that contain the possible outcomes
+//       The Choice tuple is an anonymous struct composed of a string and a page
+
+class Page {
+    let story: Story
+    
+    typealias Choice = (title: String, page: Page)
+    
+    var firstChoice: Choice?
+    var secondChoice: Choice?
+    
+    init(story: Story) {
+        self.story = story
     }
 }
