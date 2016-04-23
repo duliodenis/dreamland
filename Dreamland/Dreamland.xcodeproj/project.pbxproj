@@ -14,6 +14,7 @@
 		6CD0D9021CCBE607008B92DB /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0D9011CCBE607008B92DB /* StartVC.swift */; };
 		6CD0D9071CCBF0C0008B92DB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0D9061CCBF0C0008B92DB /* CustomButton.swift */; };
 		6CD0D9091CCBF0F7008B92DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0D9081CCBF0F7008B92DB /* Constants.swift */; };
+		6CD0D90C1CCC07F7008B92DB /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0D90B1CCC07F7008B92DB /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6CD0D9011CCBE607008B92DB /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartVC.swift; path = Controllers/StartVC.swift; sourceTree = "<group>"; };
 		6CD0D9061CCBF0C0008B92DB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = Views/CustomButton.swift; sourceTree = "<group>"; };
 		6CD0D9081CCBF0F7008B92DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Infrastructure/Constants.swift; sourceTree = "<group>"; };
+		6CD0D90B1CCC07F7008B92DB /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = Model/Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		6CD0D8ED1CCBDA8F008B92DB /* Dreamland */ = {
 			isa = PBXGroup;
 			children = (
+				6CD0D90A1CCC07A0008B92DB /* Model */,
 				6CD0D9031CCBE8EC008B92DB /* Views */,
 				6CD0D9001CCBE5E2008B92DB /* Controllers */,
 				6CD0D9051CCBE91D008B92DB /* Resources */,
@@ -100,6 +103,14 @@
 				6CD0D8F51CCBDA8F008B92DB /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6CD0D90A1CCC07A0008B92DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CD0D90B1CCC07F7008B92DB /* Story.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				6CD0D9021CCBE607008B92DB /* StartVC.swift in Sources */,
 				6CD0D9071CCBF0C0008B92DB /* CustomButton.swift in Sources */,
 				6CD0D9091CCBF0F7008B92DB /* Constants.swift in Sources */,
+				6CD0D90C1CCC07F7008B92DB /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
