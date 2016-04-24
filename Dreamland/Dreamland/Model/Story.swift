@@ -58,3 +58,49 @@ class Page {
         self.story = story
     }
 }
+
+
+// MARK: Page Extension
+//       provides adding choices to the page
+
+extension Page {
+    
+    // add a choice given the story which creates a page and calls
+    // the addChoice(title, page) method
+    
+    func addChoice(title: String, story: Story) -> Page {
+        let page = Page(story: story)
+        return addChoice(title, page: page)
+    }
+    
+    
+    // add a choice to a page using a switch
+    
+    func addChoice(title: String, page: Page) -> Page {
+        switch (firstChoice, secondChoice) {
+            case (.Some, .Some) :                 break
+            case (.None, .None), (.None, .Some) : firstChoice  = (title, page)
+            case (.Some, .None) :                 secondChoice = (title, page)
+        }
+        
+        return page
+    }
+    
+}
+
+
+// MARK: Adventure struct
+//       provides a tree of pages
+
+struct Adventure {
+    
+    static var story: Page {
+        
+        let haunting = Page(story: .Haunting)
+        haunting.addChoice("Scare people", story: .TheScare)
+        haunting.addChoice("Go eat", story: .Portal)
+        
+        return haunting
+    }
+    
+}
