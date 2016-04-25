@@ -27,7 +27,7 @@
                                 </constraints>
                                 <state key="normal" title="Start Adventure"/>
                                 <connections>
-                                    <segue destination="EIm-gR-Bye" kind="show" id="dNb-a1-Rwj"/>
+                                    <segue destination="EIm-gR-Bye" kind="show" identifier="PageController" id="dNb-a1-Rwj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1232" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Controller-->
         <scene sceneID="SaN-vR-d5I">
             <objects>
-                <viewController id="EIm-gR-Bye" sceneMemberID="viewController">
+                <viewController id="EIm-gR-Bye" customClass="PageController" customModule="Dreamland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gCM-8h-2Sm"/>
                         <viewControllerLayoutGuide type="bottom" id="mi4-UF-tO7"/>

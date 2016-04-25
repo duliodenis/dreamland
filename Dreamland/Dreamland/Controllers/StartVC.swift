@@ -10,5 +10,12 @@ import UIKit
 
 class StartVC: UIViewController {
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PageController" {
+            if let pageController = segue.destinationViewController as? PageController {
+                pageController.page = Adventure.story
+            }
+        }
+    }
+    
 }
