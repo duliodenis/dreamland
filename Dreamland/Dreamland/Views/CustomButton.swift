@@ -11,6 +11,20 @@ import UIKit
 class CustomButton: UIButton {
     
     override func awakeFromNib() {
+        setupView()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        self.setupView()
+    }
+    
+    func setupView() {
         layer.cornerRadius = 4.0
         layer.shadowColor = UIColor(red: BUTTON_SHADOW_COLOR, green: BUTTON_SHADOW_COLOR, blue: BUTTON_SHADOW_COLOR, alpha: 0.7).CGColor
         layer.shadowOpacity = 0.8
