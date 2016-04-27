@@ -12,10 +12,19 @@ import UIKit
 // MARK: Story
 //       The Story enumeration lists all the pages in the story
 
-enum Story: String {
-    case Haunting
-    case TheScare
+enum Story {
+    case Haunting(String)
+    case TheScare(String)
     case Portal
+    
+    // computed rawValue
+    var rawValue: String {
+        switch self {
+        case .Haunting: return "Haunting"
+        case .TheScare: return "TheScare"
+        case .Portal: return "Portal"
+        }
+    }
 }
 
 
@@ -29,11 +38,11 @@ extension Story {
     
     var text: String {
         switch self {
-        case .Haunting:
-            return "Freddy and his friends were haunting people, as usual, but Freddy had other things in mind. He wanted to spook people from another dimension."
+        case .Haunting(let name):
+            return "Freddy, \(name) and his friends were haunting people, as usual, but Freddy had other things in mind. He wanted to spook people from another dimension."
             
-        case .TheScare:
-            return "\"Let's go, then!\" Bonnie said. \"Okay.\" Foxy said, not all that excited."
+        case .TheScare(let name):
+            return "\"Let's go, then!\" \(name) said. \"Okay.\" Foxy said, not all that excited."
             
         case .Portal:
             return "They went off to the Pizzeria, so they could scare Mike or Jeremy, again! But they saw a portal instead. A portal, that sends them into another world."
@@ -94,10 +103,10 @@ extension Page {
 
 struct Adventure {
     
-    static var story: Page {
+    static func story(name: String) -> Page {
         
-        let haunting = Page(story: .Haunting)
-        haunting.addChoice("Scare people", story: .TheScare)
+        let haunting = Page(story: .Haunting(name))
+        haunting.addChoice("Scare people", story: .TheScare(name))
         haunting.addChoice("Go eat", story: .Portal)
         
         return haunting
