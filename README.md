@@ -1,7 +1,7 @@
 # Dreamland
 An iOS 9 / Swift 2 Choose Your Own Adventure App.
 
-![](art/screenshot/dreamland03.gif?raw=true)
+![](art/screenshot/dreamland04.gif?raw=true)
 
 ### Licensing
 Dreamland is licensed under [the MIT License](LICENSE).

@@ -31,7 +31,7 @@
                                     <segue destination="EIm-gR-Bye" kind="show" identifier="PageController" id="dNb-a1-Rwj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-bb-hCF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-bb-hCF">
                                 <rect key="frame" x="44" y="456" width="512" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -61,6 +61,7 @@
                     <navigationItem key="navigationItem" title="Welcome" id="pOY-Su-z0Q"/>
                     <connections>
                         <outlet property="nameTextField" destination="ahn-bb-hCF" id="cFf-Iu-sgS"/>
+                        <outlet property="textFieldBottomConstraint" destination="Gvv-xf-axb" id="qUd-lc-56m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
